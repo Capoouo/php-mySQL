@@ -1,0 +1,1159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>無標題文件</title>
+ <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+ 
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+ 
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	  
+<style type="text/css">
+.ui-widget-header,.ui-state-default, ui-button{
+ 
+            background:#b9cd6d;
+ 
+            border: 1px solid #b9cd6d;
+ 
+            color: #FFFFFF;
+ 
+            font-weight: bold;
+ 
+         }
+     
+.coverflow{
+        width: 1190px;
+        height: 624px;
+        position: relative;
+    }
+    .coverflow>a{
+        display: block;
+        position: absolute;
+        top:0;
+        left:0;
+        opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-animation: silder 12s linear infinite;
+                    animation: silder 12s linear infinite;
+    }
+    .coverflow>a>img{
+        max-width: 100%;
+    }
+
+/動畫關鍵影格/
+    @-webkit-keyframes silder {
+        8% {
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+        27% {
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+        38% {
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+    }
+    @keyframes silder {
+        8% {
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+        27% {
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+        38% {
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+    }
+
+
+/每個圖片各延遲5秒/
+    .coverflow>a:nth-child(3) {
+        -webkit-animation-delay: 12s;
+                animation-delay: 12s;
+
+    }
+	.coverflow>a:nth-child(2) {
+        -webkit-animation-delay: 8s;
+                animation-delay: 8s;
+
+    }
+	.coverflow>a:nth-child(1) {
+        -webkit-animation-delay: 4s;
+                animation-delay: 4s;
+
+    }
+	/滑入時停止播放/
+.coverflow:hover>a{
+-webkit-animation-play-state: paused;
+animation-play-state: paused;
+}
+.coverflow:hover>a{
+-webkit-animation-iteration-count: 100;
+animation-iteration-count: 100;
+}
+.1 {
+}
+.font12 {
+	color: #FFF;
+}
+.table {
+	background-color: #9999cc;
+	text-align: center;
+}
+.font3 {
+	font-size: 36px;
+	text-align: center;
+}
+.title1 {
+	height: auto;
+	width: auto;
+}
+body {
+	background-color: #151b27;
+}
+.table tr td .font12 {
+	font-size: 36px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+.fonr4 {
+	font-size: 24px;
+	color: #000;
+}
+.table tr .1263 table {
+	text-align: center;
+}
+.text form {
+	text-align: left;
+}
+.regustertext {
+	text-align: center;
+}
+.regustertextform {
+	text-align: center;
+}
+.rule {
+	color: #00F;
+}
+</style>
+     
+      
+</head>
+
+<body>
+
+<table width="1190" border="0" align="center">
+  <tr class="table">
+    <td height="30" class="font3"><a href="index.html"><img src="images/Background.png" width="1190" height="30" /></a></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table width="700" height="550" border="0" align="center" cellpadding="0" cellspacing="0" class="table">
+  <tr>
+    <td width="205" height="500" colspan="5" class="1263"><table width="485" height="498" border="1" align="center">
+      <tr>
+        <td height="35" class="regustertext">電子郵件:</td>
+        <td height="35"><form action="register_finish.php" method="post" name="form1" class="regustertextform" id="form1">
+          <label for="email"></label>
+          <input name="email" type="email" id="email"  size="50" />
+        </td>
+      </tr>
+      <tr>
+        <td height="35" class="regustertext">帳號:</td>
+        <td height="35"
+          <label for="acount"></label>
+          <input name="acount" type="text" id="acount" size="50" maxlength="30" />
+	 </td>
+      </tr>
+      <tr>
+        <td height="35" class="regustertext">密碼:</td>
+        <td height="35"
+          <p>
+            <label for="password"></label>
+            <input name="password" type="password" id="password" size="50" maxlength="30" />
+          
+       </td>
+      </tr>
+	</p>
+      <tr>
+        <td height="35" class="regustertext">確認密碼:</td>
+        <td height="35"
+			<p>
+          <label for="passwordrp"></label>
+          <input name="passwordrp" type="password" id="passwordrp" size="50" maxlength="30" />
+        </td>
+      </tr>
+      </p>
+      <tr>
+        <td height="35" class="regustertext">用戶名稱:</td>
+        <td height="35"
+          <p>
+            <label for="id"></label>
+            <input name="id" type="text" id="id" size="50" maxlength="8" />
+          
+        </td>
+      </tr>
+</p>
+      <tr>
+        <td height="35" class="regustertext">性別:</td>
+        <td height="35"
+			<p>
+          <input name="sex" type="radio" class="regustertextform" id="boy" value="boy" />
+          男
+          <label for="boy"></label>
+          <input type="radio" name="sex" id="girl" value="girl" />
+          <label for="girl"></label>
+        女
+        </td>
+      </tr>
+</p>
+      <tr>
+        <td height="35" class="regustertext">縣市:</td>
+        <td height="35"
+			<p>
+          <label for="city"></label>
+          <select name="city" class="regustertextform" id="city">
+            <option value="Keelung">基隆市</option>
+            <option value="Taipei">台北市</option>
+            <option value="Xinbei">新北市</option>
+            <option value="Taoyuan">桃園縣</option>
+            <option value="HsinchuS">新竹市</option>
+            <option value="HsinchuC">新竹縣</option>
+            <option value="Miaoli">苗栗縣</option>
+            <option value="Taichung">台中市</option>
+            <option value="Changhua">彰化縣</option>
+            <option value="Nantou">南投縣</option>
+            <option value="Yunlin">雲林縣</option>
+            <option value="ChiayiS">嘉義市</option>
+            <option value="ChiayiC">嘉義縣</option>
+            <option value="Tainan">台南市</option>
+            <option value="Kaohsiung">高雄市</option>
+            <option value="Pingtung">屏東縣</option>
+            <option value="Taitung">台東縣</option>
+            <option value="Hualien">花蓮縣</option>
+            <option value="Yilan">宜蘭縣</option>
+            <option value="Penghu">澎湖縣</option>
+            <option value="Kinmen">金門縣</option>
+            <option value="Lienchiang">連江縣</option>
+          </select>
+        </td>
+      </tr>
+     </p>
+      <tr>
+        <td height="35" class="regustertext">高中大專:</td>
+        <td height="35"
+			<p>
+          <label for="grade"></label>
+          <select name="grade" size="1" class="regustertextform" id="grade">
+            <option value="jk" class="regustertextform">高中</option>
+            <option value="us" class="regustertextform">大學</option>
+          </select>
+       </td>
+      </tr>
+</p>
+      <tr>
+        <td height="35" class="regustertext">學校:</td>
+        <td>
+          
+           <div id="a" style="display:on">
+        <span>
+       
+           <label for="jk">
+          <input list="jk" name="jk" class="regustertextform"></label>
+          <datalist id="jk">
+<option id="jk1">國立華僑高級中等學校</option>
+<option id="jk2">私立淡江高中</option>
+<option id="jk3">私立康橋高中</option>
+<option id="jk4">私立金陵女中</option>
+<option id="jk5">新北市裕德高級中等學校</option>
+<option id="jk6">財團法人南山高中</option>
+<option id="jk7">財團法人恆毅高中</option>
+<option id="jk8">私立聖心女中</option>
+<option id="jk9">私立崇義高中</option>
+<option id="jk10">財團法人中華高中</option>
+<option id="jk11">私立東海高中</option>
+<option id="jk12">私立格致高中</option>
+<option id="jk13">私立醒吾高中</option>
+<option id="jk14">私立徐匯高中</option>
+<option id="jk15">新北市崇光高中</option>
+<option id="jk16">私立光仁高中</option>
+<option id="jk17">私立竹林高中</option>
+<option id="jk18">私立及人高中</option>
+<option id="jk19">財團法人辭修高中</option>
+<option id="jk20">新北市林口康橋國際高中</option>
+<option id="jk21">私立時雨高中</option>
+<option id="jk22">私立樹人家商</option>
+<option id="jk23">私立復興商工</option>
+<option id="jk24">私立復南強工商</option>
+<option id="jk25">私立穀保家商</option>
+<option id="jk26">私立開明工商</option>
+<option id="jk27">私立智光商工</option>
+<option id="jk28">私立清傳高商</option>
+<option id="jk29">私立能仁家商</option>
+<option id="jk30">私立豫章工商</option>
+<option id="jk31">私立莊敬工家</option>
+<option id="jk32">私立中華商海</option>
+<option id="jk33">市立泰山高中</option>
+<option id="jk34">市立板橋高中</option>
+<option id="jk35">市立新店高中</option>
+<option id="jk36">市立中和高中</option>
+<option id="jk37">市立新莊高中</option>
+<option id="jk38">市立新北高中</option>
+<option id="jk39">市立林口高中</option>
+<option id="jk40">市立瑞芳高工</option>
+<option id="jk41">市立三重商工</option>
+<option id="jk42">市立新北高工</option>
+<option id="jk43">市立淡水商工</option>
+<option id="jk44">市立海山高中</option>
+<option id="jk45">市立三重高中</option>
+<option id="jk46">市立永平高中</option>
+<option id="jk47">市立樹林高中</option>
+<option id="jk48">市立明德高中</option>
+<option id="jk49">市立秀峰高中</option>
+<option id="jk50">市立金山高中</option>
+<option id="jk51">市立安康高中</option>
+<option id="jk52">市立雙溪高中</option>
+<option id="jk53">市立石碇高中</option>
+<option id="jk54">市立丹鳳高中</option>
+<option id="jk55">市立清水高中</option>
+<option id="jk56">市立三民高中</option>
+<option id="jk57">市立錦和高中</option>
+<option id="jk58">市立光復高中</option>
+<option id="jk59">市立竹圍高中</option>
+<option id="jk60">市立北大高級中學</option>
+<option id="jk61">市立豐珠中學</option>
+<option id="jk62">市立鶯歌工商</option>
+<option id="jk63">市立樟樹國際實中</option>
+<option id="jk64">臺北市普林思頓高中</option>
+<option id="jk65">市立西松高中</option>
+<option id="jk66">市立中崙高中</option>
+<option id="jk67">臺北市私立協和祐德高級中學</option>
+<option id="jk68">市立松山高中</option>
+<option id="jk69">市立永春高中</option>
+<option id="jk70">市立松山家商</option>
+<option id="jk71">市立松山工農</option>
+<option id="jk72">國立師大附中</option>
+<option id="jk73">私立延平中學</option>
+<option id="jk74">私立金甌女中</option>
+<option id="jk75">私立復興實驗高中</option>
+<option id="jk76">私立東方工商</option>
+<option id="jk77">私立喬治工商</option>
+<option id="jk78" >私立開平餐飲</option>
+<option id="jk79">市立和平高中</option>
+<option id="jk80">市立大安高工</option>
+<option id="jk81">私立大同高中</option>
+<option id="jk82">私立稻江護家</option>
+<option id="jk83">市立中山女中</option>
+<option id="jk84">市立大同高中</option>
+<option id="jk85">市立大直高中</option>
+<option id="jk86">私立強恕中學</option>
+<option id="jk87">臺北市開南高中</option>
+<option id="jk88">市立建國中學</option>
+<option id="jk89">市立成功中學</option>
+<option id="jk90">市立北一女中</option>
+<option id="jk91">臺北市靜修高中</option>
+<option id="jk92">私立稻江高商</option>
+<option id="jk93">市立明倫高中</option>
+<option id="jk94">市立成淵高中</option>
+<option id="jk95">市立華江高中</option>
+<option id="jk96">市立大理高中</option>
+<option id="jk97">國立政大附中</option>
+<option id="jk98">私立東山高中</option>
+<option id="jk99">私立滬江高中</option>
+<option id="jk100">私立大誠高中</option>
+<option id="jk101">私立再興中學</option>
+<option id="jk102">私立景文高中</option>
+<option id="jk103">臺北市靜心高中</option>
+<option id="jk104">市立景美女中</option>
+<option id="jk105">市立萬芳高中</option>
+<option id="jk106">市立木柵高工</option>
+<option id="jk107">市立南港高中</option>
+<option id="jk108">市立育成高中</option>
+<option id="jk109">市立南港高工</option>
+<option id="jk110">私立文德女中</option>
+<option id="jk111">私立方濟中學</option>
+<option id="jk112">私立達人女中</option>
+<option id="jk113">市立內湖高中</option>
+<option id="jk114">市立麗山高中</option>
+<option id="jk115">市立南湖高中</option>
+<option id="jk116">市立內湖高工</option>
+<option id="jk117">私立泰北高中</option>
+<option id="jk118">私立衛理女中</option>
+<option id="jk119">私立華興中學</option>
+<option id="jk120">私立華岡藝校</option>
+<option id="jk121">市立陽明高中</option>
+<option id="jk122">市立百齡高中</option>
+<option id="jk123">市立士林高商</option>
+<option id="jk124">私立薇閣高中</option>
+<option id="jk125">臺北市幼華高中</option>
+<option id="jk126">臺北市私立奎山實驗高級中學</option>
+<option id="jk127">私立惇敘工商</option>
+<option id="jk128">市立復興高中</option>
+<option id="jk129">市立中正高中</option>
+<option id="jk130">國立中央大學附屬中壢高中</option>
+<option id="jk131">國立北科大附屬桃園農工</option>
+<option id="jk132">私立漢英高中</option>
+<option id="jk133">桃園市育達高中</option>
+<option id="jk134">私立六和高中</option>
+<option id="jk135">桃園市復旦高中</option>
+<option id="jk136">桃園市治平高中</option>
+<option id="jk137">桃園市振聲高中</option>
+<option id="jk138">私立光啟高中</option>
+<option id="jk139">桃園市啟英高中</option>
+<option id="jk140">桃園市清華高中</option>
+<option id="jk141">桃園市新興高中</option>
+<option id="jk142">私立至善高中</option>
+<option id="jk143">桃園市大興高中</option>
+<option id="jk144">私立大華高中</option>
+<option id="jk145">私立成功工商</option>
+<option id="jk146">私立方曙商工</option>
+<option id="jk147">私立永平工商</option>
+<option id="jk148">市立龍潭高中</option>
+<option id="jk149">市立桃園高中</option>
+<option id="jk150">市立武陵高中</option>
+<option id="jk151">市立楊梅高中</option>
+<option id="jk152">市立陽明高中</option>
+
+<option id="jk153">市立內壢高中</option>
+<option id="jk154">市立中壢高商</option>
+<option id="jk155">市立中壢家商</option>
+<option id="jk156">市立南崁高中</option>
+<option id="jk157">市立大溪高中</option>
+<option id="jk158">市立壽山高中</option>
+<option id="jk159">市立平鎮高中</option>
+<option id="jk160">市立觀音高中</option>
+<option id="jk161">市立新屋高級中等學校</option>
+<option id="jk162">市立永豐高中</option>
+<option id="jk163">市立大園國際高中</option>
+<option id="jk164">國立興大附中</option>
+
+<option id="jk165">國立中科實驗高級中學</option>
+<option id="jk166">財團法人常春藤高中</option>
+<option id="jk167">私立明台高中</option>
+<option id="jk168">私立致用高中</option>
+<option id="jk169">私立大明高中</option>
+<option id="jk170">私立嘉陽高中</option>
+<option id="jk171">私立明道高中</option>
+<option id="jk172">私立僑泰高中</option>
+<option id="jk173">私立華盛頓高中</option>
+<option id="jk174">私立青年高中</option>
+<option id="jk175">私立弘文高中</option>
+<option id="jk176">私立立人高中</option>
+
+<option id="jk177">私立玉山高中</option>
+<option id="jk178">私立慈明高中</option>
+<option id="jk179">華德福大地實驗學校</option>
+<option id="jk180">市立大甲高中</option>
+<option id="jk181">市立清水高中</option>
+<option id="jk182">市立豐原高中</option>
+<option id="jk183">市立豐原高商</option>
+<option id="jk184">市立大甲高工</option>
+<option id="jk185">市立東勢高工</option>
+<option id="jk186">市立沙鹿高工</option>
+<option id="jk187">市立霧峰農工</option>
+<option id="jk188">市立后綜高中</option>
+
+<option id="jk189">市立大里高中</option>
+<option id="jk190">市立新社高中</option>
+<option id="jk191">市立長億高中</option>
+<option id="jk192">市立中港高中</option>
+<option id="jk193">市立龍津高中</option>
+<option id="jk194">市立神岡高工</option>
+<option id="jk195">國立興大附農</option>
+<option id="jk196">私立東大附中</option>
+<option id="jk197">私立葳格高中</option>
+<option id="jk198">私立新民高中</option>
+<option id="jk199">私立宜寧高中</option>
+<option id="jk200">私立明德高中</option>
+
+<option id="jk201">私立衛道高中</option>
+<option id="jk202">私立曉明女中</option>
+<option id="jk203">私立嶺東高中</option>
+<option id="jk204">私立磊川華德福實驗教育學校</option>
+<option id="jk205">財團法人光華高工</option>
+<option id="jk206">市立臺中女中</option>
+<option id="jk207">市立臺中一中</option>
+<option id="jk208">市立忠明高中</option>
+<option id="jk209">市立西苑高中</option>
+<option id="jk210">市立東山高中</option>
+<option id="jk211">市立惠文高中</option>
+<option id="jk212">市立臺中家商</option>
+
+<option id="jk213">市立臺中高工</option>
+<option id="jk214">市立臺中二中</option>
+<option id="jk215">市立文華高中</option>
+<option id="jk216">國立新豐高中</option>
+<option id="jk217">國立臺南大學附中</option>
+<option id="jk218">國立北門高中</option>
+<option id="jk219">國立新營高中</option>
+<option id="jk220">國立後壁高中</option>
+<option id="jk221">國立善化高中</option>
+<option id="jk222">國立新化高中</option>
+<option id="jk223">國立南科國際實驗高中</option>
+<option id="jk224">國立新化高工</option>
+
+<option id="jk225">國立白河商工</option>
+<option id="jk226">國立北門農工</option>
+<option id="jk227">國立曾文家商</option>
+<option id="jk228">國立新營高工</option>
+<option id="jk229">國立玉井工商</option>
+<option id="jk230">國立臺南高工</option>
+<option id="jk231">國立曾文農工</option>
+<option id="jk232">私立南光高中</option>
+<option id="jk233">私立鳳和高中</option>
+<option id="jk234">私立港明高中</option>
+<option id="jk235">臺南市興國高中</option>
+<option id="jk236">私立明達高中</option>
+
+<option id="jk237">私立黎明高中</option>
+<option id="jk238">私立新榮高中</option>
+<option id="jk239">私立陽明工商</option>
+<option id="jk240">私立育德工家</option>
+<option id="jk241">市立大灣高中</option>
+<option id="jk242">市立永仁高中</option>
+<option id="jk243">國立臺南二中</option>
+<option id="jk244">國立臺南一中</option>
+<option id="jk245">國立臺南女中</option>
+<option id="jk246">國立家齊高中</option>
+<option id="jk247">國立臺南高商</option>
+<option id="jk248">國立臺南海事</option>
+
+<option id="jk249">私立長榮高中</option>
+<option id="jk250">私立長榮女中</option>
+<option id="jk251">財團法人聖功女中</option>
+<option id="jk252">臺南市光華高中</option>
+<option id="jk253">私立六信高中</option>
+<option id="jk254">私立瀛海高中</option>
+<option id="jk255">私立崑山高中</option>
+<option id="jk256">私立德光高中</option>
+<option id="jk257">財團法人慈濟高中</option>
+<option id="jk258">私立南英商工</option>
+<option id="jk259">私立亞洲餐旅</option>
+<option id="jk260">私立慈幼工商</option>
+
+<option id="jk261">市立南寧高中</option>
+<option id="jk262">市立土城高中</option>
+<option id="jk263">國立鳳山高中</option>
+<option id="jk264">國立岡山高中</option>
+<option id="jk265">國立旗美高中</option>
+<option id="jk266">國立鳳新高中</option>
+<option id="jk267">國立旗山農工</option>
+<option id="jk268">國立岡山農工</option>
+<option id="jk269">國立鳳山商工</option>
+<option id="jk270">財團法人新光高中</option>
+<option id="jk271">財團法人普門中學</option>
+<option id="jk272">私立正義高中</option>
+
+<option id="jk273">私立義大國際高中</option>
+<option id="jk274">私立中山工商</option>
+<option id="jk275">私立旗美商工</option>
+<option id="jk276">私立高英工商</option>
+<option id="jk277">私立華德工家</option>
+<option id="jk278">私立高苑工商</option>
+<option id="jk279">市立文山高中</option>
+<option id="jk280">市立林園高中</option>
+<option id="jk281">市立仁武高中</option>
+<option id="jk282">市立路竹高中</option>
+<option id="jk283">市立六龜高中</option>
+<option id="jk284">市立福誠高中</option>
+
+<option id="jk285">天主教明誠高中</option>
+<option id="jk286">私立大榮高中</option>
+<option id="jk287">私立中華藝校</option>
+<option id="jk288">市立鼓山高中</option>
+<option id="jk289">市立左營高中</option>
+<option id="jk290">市立新莊高中</option>
+<option id="jk291">市立海青工商</option>
+<option id="jk292">市立三民家商</option>
+<option id="jk293">國立中山大學附屬國光高中</option>
+<option id="jk294">國立中山大學附屬國光高中</option>
+<option id="jk295">市立中山高中</option>
+<option id="jk296">市立楠梓高中</option>
+
+<option id="jk297">私立立志高中</option>
+<option id="jk298">南海月光實驗學校</option>
+<option id="jk299">私立樹德家商</option>
+<option id="jk300">市立高雄中學</option>
+<option id="jk301">市立三民高中</option>
+<option id="jk302">市立高雄高工</option>
+<option id="jk303">市立新興高中</option>
+<option id="jk304">市立高雄高商</option>
+<option id="jk305">市立高雄女中</option>
+<option id="jk306">國立高師大附中</option>
+<option id="jk307">私立復華高中</option>
+<option id="jk308">天主教道明中學</option>
+
+<option id="jk309">私立國際商工</option>
+<option id="jk310">私立三信家商</option>
+<option id="jk311">市立中正高中</option>
+<option id="jk312">市立前鎮高中</option>
+<option id="jk313">市立瑞祥高中</option>
+<option id="jk314">市立中正高工</option>
+<option id="jk315">國立高餐大附屬餐旅中學</option>
+<option id="jk316">市立小港高中</option>
+<option id="jk317">國立蘭陽女中</option>
+<option id="jk318">國立宜蘭高中</option>
+<option id="jk319">國立羅東高中</option>
+<option id="jk320">國立宜蘭高商</option>
+
+<option id="jk321">國立羅東高商</option>
+<option id="jk322">國立蘇澳海事</option>
+<option id="jk323">國立羅東高工</option>
+<option id="jk324">國立頭城家商</option>
+<option id="jk325">私立慧燈高中</option>
+<option id="jk326">私立中道高中</option>
+<option id="jk327">縣立南澳高中</option>
+<option id="jk328">縣立慈心華德福實中</option>
+<option id="jk329">國立竹東高中</option>
+<option id="jk330">國立關西高中</option>
+<option id="jk331">國立竹北高中</option>
+<option id="jk332">私立義民高中</option>
+
+<option id="jk333">私立忠信高中</option>
+<option id="jk334">私立東泰高中</option>
+<option id="jk335">私立仰德高中</option>
+<option id="jk336">私立內思高工</option>
+<option id="jk337">縣立六家高級中學</option>
+<option id="jk338">縣立湖口高中</option>
+<option id="jk339">國立苗栗高中</option>
+<option id="jk340">國立竹南高中</option>
+<option id="jk341">國立卓蘭高中</option>
+<option id="jk342">國立苑裡高中</option>
+<option id="jk343">國立大湖農工</option>
+<option id="jk344">國立苗栗農工</option>
+
+<option id="jk345">國立苗栗高商</option>
+<option id="jk346">私立君毅高中</option>
+<option id="jk347">私立君毅高中</option>
+<option id="jk348">私立建臺高中</option>
+<option id="jk349">私立全人實驗高中</option>
+<option id="jk350">私立中興商工</option>
+<option id="jk351">私立育民工家</option>
+<option id="jk352">私立賢德工商</option>
+<option id="jk353">私立龍德家商</option>
+<option id="jk354">縣立三義高中</option>
+<option id="jk355">縣立苑裡高中</option>
+<option id="jk356">縣立興華高中</option>
+
+<option id="jk357">縣立大同高中</option>
+<option id="jk358">國立彰化女中</option>
+<option id="jk359">國立員林高中</option>
+<option id="jk360">國立彰化高中</option>
+<option id="jk361">國立鹿港高中</option>
+<option id="jk362">國立溪湖高中</option>
+<option id="jk363">國立彰師附工</option>
+<option id="jk364">國立永靖高工</option>
+<option id="jk365">國立二林工商</option>
+<option id="jk366">國立秀水高工</option>
+<option id="jk367">國立彰化高商</option>
+<option id="jk368">國立員林農工</option>
+
+<option id="jk369">國立員林崇實高工</option>
+<option id="jk370">國立員林家商</option>
+<option id="jk371">國立北斗家商</option>
+<option id="jk372">私立精誠高中</option>
+<option id="jk373">私立文興高中</option>
+<option id="jk374">財團法人正德高中</option>
+<option id="jk375">私立大慶商工</option>
+<option id="jk376">私立達德商工</option>
+<option id="jk377">縣立彰化藝術高中</option>
+<option id="jk378">縣立二林高中</option>
+<option id="jk379">縣立和美高中</option>
+<option id="jk380">縣立田中高中</option>
+
+<option id="jk381">縣立成功高中</option>
+<option id="jk382">國立南投高中</option>
+<option id="jk383">國立中興高中</option>
+<option id="jk384">國立竹山高中</option>
+<option id="jk385">國立暨大附中</option>
+<option id="jk386">國立仁愛高農</option>
+<option id="jk387">國立埔里高工</option>
+<option id="jk388">國立南投高商</option>
+<option id="jk389">國立草屯商工</option>
+<option id="jk390">國立水里商工</option>
+<option id="jk391">私立五育高中</option>
+<option id="jk392">私立三育高中</option>
+
+<option id="jk393">私立弘明實驗高中</option>
+<option id="jk394">私立普台高中</option>
+<option id="jk395">私立同德家商</option>
+<option id="jk396">縣立旭光高中</option>
+<option id="jk397">國立斗六高中v</option>
+<option id="jk398">國立北港高中</option>
+<option id="jk399">國立虎尾高中</option>
+<option id="jk400">國立虎尾農工</option>
+<option id="jk401">國立西螺農工</option>
+<option id="jk402">國立斗六家商</option>
+<option id="jk403">國立北港農工</option>
+<option id="jk404">國立土庫商工</option>
+
+<option id="jk405">私立永年高中</option>
+<option id="jk406">私立正心高中</option>
+<option id="jk407">私立文生高中</option>
+<option id="jk408">私立巨人高中</option>
+<option id="jk409">私立揚子高中</option>
+<option id="jk410">財團法人義峰高中</option>
+<option id="jk411">福智高中</option>
+<option id="jk412">雲林縣維多利亞實驗高中</option>
+<option id="jk413">私立大成商工</option>
+<option id="jk414">私立大德工商</option>
+<option id="jk415">縣立斗南高中</option>
+<option id="jk416">縣立麥寮高中</option>
+
+<option id="jk417">縣立古坑華德福實驗高級中學</option>
+<option id="jk418">縣立蔦松藝術高中</option>
+<option id="jk419">國立東石高中</option>
+<option id="jk420">國立新港藝術高中</option>
+<option id="jk421">國立民雄農工</option>
+<option id="jk422">私立同濟高中</option>
+<option id="jk423">私立協同高中</option>
+<option id="jk424">私立協志工商</option>
+<option id="jk425">私立萬能工商</option>
+<option id="jk426">私立弘德工商</option>
+<option id="jk427">縣立竹崎高中</option>
+<option id="jk428">縣立永慶高中</option>
+
+<option id="jk429">國立屏東女中</option>
+<option id="jk430">國立屏東高中</option>
+<option id="jk431">國立潮州高中</option>
+<option id="jk432">國立屏北高中</option>
+<option id="jk433">國立內埔農工</option>
+<option id="jk434">國立屏東高工</option>
+<option id="jk435">國立佳冬高農</option>
+<option id="jk436">國立東港海事</option>
+<option id="jk437">國立恆春工商</option>
+<option id="jk438">屏東縣崇華高中</option>
+<option id="jk439">財團法人屏榮高中</option>
+<option id="jk440">私立陸興高中</option>
+
+<option id="jk441">私立美和高中</option>
+<option id="jk442">私立民生家商</option>
+<option id="jk443">私立日新工商</option>
+<option id="jk444">縣立大同高中</option>
+<option id="jk445">縣立枋寮高中</option>
+<option id="jk446">縣立東港高中</option>
+<option id="jk447">縣立來義高中 </option>
+<option id="jk448">國立臺東大學附屬體育高中</option>
+<option id="jk449">國立臺東女中</option>
+<option id="jk450">國立臺東高中</option>
+<option id="jk451">國立關山工商</option>
+<option id="jk452">國立臺東高商</option>
+
+<option id="jk453">國立成功商水</option>
+<option id="jk454">臺東縣均一高中</option>
+<option id="jk455">私立育仁高中</option>
+<option id="jk456">私立公東高工</option>
+<option id="jk457">縣立蘭嶼高中</option>
+<option id="jk458">國立花蓮女中</option>
+<option id="jk459">國立花蓮高中</option>
+<option id="jk460">國立玉里高中</option>
+<option id="jk461">國立花蓮高農</option>
+<option id="jk462">國立花蓮高商</option>
+<option id="jk463">國立光復商工</option>
+<option id="jk464">私立海星高中</option>
+
+<option id="jk465">私立四維高中</option>
+<option id="jk466">財團法人慈濟大學附中</option>
+<option id="jk467">花蓮縣上騰工商</option>
+<option id="jk468">花蓮縣立體育高中</option>
+<option id="jk469">縣立南平中學</option>
+<option id="jk470">國立馬公高中</option>
+<option id="jk471">國立澎湖海事水產</option>
+<option id="jk472">國立基隆女中</option>
+<option id="jk473">國立基隆高中</option>
+<option id="jk474">國立海洋大學附屬基隆海事</option>
+<option id="jk475">國立基隆商工</option>
+<option id="jk476">私立二信高中</option>
+
+<option id="jk477">輔大聖心高中</option>
+<option id="jk478">私立光隆家商</option>
+<option id="jk479">私立培德工家</option>
+<option id="jk480">市立中山高中</option>
+<option id="jk481">市立安樂高中</option>
+<option id="jk482">市立暖暖高中</option>
+<option id="jk483">市立八斗高中</option>
+<option id="jk484">國立科學工業園區實驗高中</option>
+<option id="jk485">國立新竹女中</option>
+<option id="jk486">國立新竹高中</option>
+<option id="jk487">國立新竹高商</option>
+<option id="jk488">國立新竹高工</option>
+
+<option id="jk489">私立光復高中</option>
+<option id="jk490">私立曙光女中</option>
+<option id="jk491">私立磐石高中</option>
+<option id="jk492">私立世界高中</option>
+<option id="jk493">市立成德高中</option>
+<option id="jk494">市立香山高中</option>
+<option id="jk495">市立建功高中</option>
+<option id="jk496">國立嘉義女中</option>
+<option id="jk497">國立嘉義高中</option>
+<option id="jk498">國立華南高商</option>
+<option id="jk499">國立嘉義高工</option>
+<option id="jk500">國立嘉義高商</option>
+
+<option id="jk501">國立嘉義家職</option>
+<option id="jk502">私立興華高中</option>
+<option id="jk503">私立仁義高中</option>
+<option id="jk504">私立嘉華高中</option>
+<option id="jk505">私立輔仁高中</option>
+<option id="jk506">私立宏仁女中</option>
+<option id="jk507">私立立仁高中</option>
+<option id="jk508">私立東吳工家</option>
+<option id="jk509">國立金門高中</option>
+<option id="jk510">國立金門農工</option>
+<option id="jk511">國立馬祖高中</option>
+<option id="jk512">私立光華高商進修學校</option>
+<option id="jk513">私立南華高中進修學校</option>
+<option id="jk514">私立志仁中學進修學校</option>
+          </datalist>
+            
+          </select>
+        </div>
+         <div id="b" style="display:none">
+        <span>
+       
+          <label for="us">
+          <input list="us" name="us" class="regustertextform"></label>
+          <datalist id="us">
+<option id="us1">國立政治大學</option>
+<option id="us2">國立清華大學</option>
+<option id="us3">國立臺灣大學</option>
+<option id="us4">國立臺灣師範大學</option>
+<option id="us5">國立成功大學</option>
+<option id="us6">國立中興大學</option>
+<option id="us7">國立交通大學</option>
+<option id="us8">國立中央大學</option>
+<option id="us9">國立中山大學</option>
+<option id="us10">國立臺灣海洋大學</option>
+<option id="us11">國立中正大學</option>
+<option id="us12">國立高雄師範大學</option>
+<option id="us13">國立彰化師範大學</option>
+<option id="us14">國立陽明大學</option>
+<option id="us15">國立臺北大學</option>
+<option id="us16">國立嘉義大學</option>
+<option id="us17">國立高雄大學</option>
+<option id="us18">國立東華大學</option>
+<option id="us19">國立暨南國際大學</option>
+<option id="us20">國立臺灣科技大學</option>
+<option id="us21">國立雲林科技大學</option>
+<option id="us22">國立屏東科技大學</option>
+<option id="us23">國立臺北科技大學</option>
+<option id="us24">國立臺北藝術大學</option>
+<option id="us25">國立臺灣藝術大學</option>
+<option id="us26">國立臺東大學</option>
+<option id="us27">國立宜蘭大學</option>
+<option id="us28">國立聯合大學</option>
+<option id="us29">國立虎尾科技大學</option>
+<option id="us30">國立臺南藝術大學</option>
+<option id="us31">國立臺南大學</option>
+<option id="us32">國立臺北教育大學</option>
+<option id="us33">國立臺中教育大學</option>
+<option id="us34">國立澎湖科技大學</option>
+<option id="us35">國立勤益科技大學</option>
+<option id="us36">國立體育大學</option>
+<option id="us37">國立臺北護理健康大學</option>
+<option id="us38">國立高雄餐旅大學</option>
+<option id="us39">國立金門大學</option>
+<option id="us40">國立臺灣體育運動大學</option>
+<option id="us41">國立臺中科技大學</option>
+<option id="us42">國立臺北商業大學</option>
+<option id="us43">國立屏東大學</option>
+<option id="us44">國立高雄科技大學</option>
+<option id="us45">東海大學</option>
+<option id="us46">輔仁大學</option>
+<option id="us47">東吳大學</option>
+<option id="us48">中原大學</option>
+<option id="us49">淡江大學</option>
+<option id="us50">中國文化大學</option>
+<option id="us51">逢甲大學</option>
+<option id="us52">靜宜大學</option>
+<option id="us53">長庚大學</option>
+<option id="us54">元智大學</option>
+<option id="us55">中華大學</option>
+<option id="us56">大葉大學</option>
+<option id="us57">華梵大學</option>
+<option id="us58">義守大學</option>
+<option id="us59">世新大學</option>
+<option id="us60">銘傳大學</option>
+<option id="us61">實踐大學</option>
+<option id="us62">朝陽科技大學</option>
+<option id="us63">高雄醫學大學</option>
+<option id="us64">南華大學</option>
+<option id="us65">真理大學</option>
+<option id="us66">大同大學</option>
+<option id="us67">南臺科技大學</option>
+<option id="us68">崑山科技大學</option>
+<option id="us69">嘉南藥理大學</option>
+<option id="us70">樹德科技大學</option>
+<option id="us71">慈濟大學</option>
+<option id="us72">臺北醫學大學</option>
+<option id="us73">中山醫學大學</option>
+<option id="us74">龍華科技大學</option>
+<option id="us75">輔英科技大學</option>
+<option id="us76">明新科技大學</option>
+<option id="us77">長榮大學</option>
+<option id="us78">弘光科技大學</option>
+<option id="us79">中國醫藥大學</option>
+<option id="us80">健行科技大學</option>
+<option id="us81">正修科技大學</option>
+<option id="us82">萬能科技大學</option>
+<option id="us83">玄奘大學</option>
+<option id="us84">建國科技大學</option>
+<option id="us85">明志科技大學</option>
+<option id="us86">高苑科技大學</option>
+<option id="us87">大仁科技大學</option>
+<option id="us88">聖約翰科技大學</option>
+<option id="us89">嶺東科技大學</option>
+<option id="us90">中國科技大學</option>
+<option id="us91">中臺科技大學</option>
+<option id="us92">亞洲大學</option>
+<option id="us93">開南大學</option>
+<option id="us94">佛光大學</option>
+<option id="us95">台南應用科技大學</option>
+<option id="us96">遠東科技大學</option>
+<option id="us97">元培醫事科技大學</option>
+<option id="us98">景文科技大學</option>
+<option id="us99">中華醫事科技大學</option>
+<option id="us100">東南科技大學</option>
+<option id="us101">德明財經科技大學</option>
+<option id="us102">明道大學</option>
+<option id="us103">南開科技大學</option>
+<option id="us104">中華科技大學</option>
+<option id="us105">僑光科技大學</option>
+<option id="us106">育達科技大學</option>
+<option id="us107">美和科技大學</option>
+<option id="us108">吳鳳科技大學</option>
+<option id="us109">環球科技大學</option>
+<option id="us110">台灣首府大學</option>
+<option id="us111">中州科技大學</option>
+<option id="us112">修平科技大學</option>
+<option id="us113">長庚科技大學</option>
+<option id="us114">臺北城市科技大學</option>
+<option id="us115">敏實科技大學</option>
+<option id="us116">醒吾科技大學</option>
+<option id="us117">文藻外語大學</option>
+<option id="us118">華夏科技大學</option>
+<option id="us119">慈濟科技大學</option>
+<option id="us120">致理科技大學</option>
+<option id="us121">康寧大學</option>
+<option id="us122">宏國德霖科技大學</option>
+<option id="us123">東方設計大學</option>
+<option id="us124">崇右影藝科技大學</option>
+<option id="us125">台北海洋科技大學</option>
+<option id="us126">臺北市立大學</option>
+<option id="us127">國立臺灣戲曲學院</option>
+<option id="us128">中信金融管理學院</option>
+<option id="us129">大漢技術學院</option>
+<option id="us130">和春技術學院</option>
+<option id="us131">亞東技術學院</option>
+<option id="us132">南亞技術學院</option>
+<option id="us133">稻江科技暨管理學院</option>
+<option id="us134">蘭陽技術學院</option>
+<option id="us135">黎明技術學院</option>
+<option id="us136">經國管理暨健康學院</option>
+<option id="us137">大同技術學院</option>
+<option id="us138">臺灣觀光學院</option>
+<option id="us139">馬偕醫學院</option>
+<option id="us140">法鼓文理學院</option>
+<option id="us141">國立臺南護理專科學校</option>
+<option id="us142">國立臺東專科學校</option>
+<option id="us143">馬偕醫護管理專科學校</option>
+<option id="us144">仁德醫護管理專科學校</option>
+<option id="us145">樹人醫護管理專科學校</option>
+<option id="us146">慈惠醫護管理專科學校</option>
+<option id="us147">耕莘健康管理專科學校</option>
+<option id="us148">敏惠醫護管理專科學校</option>
+<option id="us149">育英醫護管理專科學校</option>
+<option id="us150">聖母醫護管理專科學校</option>
+<option id="us151">新生醫護管理專科學校</option>
+<option id="us152">崇仁醫護管理專科學校</option>
+          </datalist>
+          </span>
+        </div>
+        </script>
+<script>
+$("#grade").on("change",function(){
+	var selectedValue =$("#grade").val();
+	if(selectedValue == "jk"){
+		$("#a").show();
+		$("#b").hide();
+		}
+    else if(selectedValue == "us"){
+		$("#a").hide();
+		$("#b").show();
+		}
+})
+</script>
+       </td>
+      </tr>
+      <tr>
+        <td height="35" class="regustertext">出生日期:</td>
+        <td height="35"
+			<p>
+          <label for="year"></label>
+
+          <select name="year" class="regustertextform" id="year">
+          <option value disabled selected hidden>年</option>
+             <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option>
+                <option value="2014">2014</option>
+                <option value="2013">2013</option>
+                <option value="2012">2012</option>
+                <option value="2011">2011</option>
+                <option value="2010">2010</option>
+                <option value="2009">2009</option>
+                <option value="2008">2008</option>
+                <option value="2007">2007</option>
+                <option value="2006">2006</option>
+                <option value="2005">2005</option>
+                                                                                                                <option value="2004">2004</option>
+                <option value="2003">2003</option>
+                <option value="2002">2002</option>
+                                                                                                                <option value="2001">2001</option>
+                <option value="2000">2000</option>
+                <option value="1999">1999</option>
+                                                                                                                <option value="1998">1998</option>
+                                                                                                                <option value="1997">1997</option>
+                                                                                                                <option value="1996">1996</option>
+                                                                                                                <option value="1995">1995</option>
+                                                                                                                <option value="1994">1994</option>
+                                                                                                                <option value="1993">1993</option>
+                                                                                                                <option value="1992">1992</option>
+                                                                                                                <option value="1991">1991</option>
+                                                                                                                <option value="1990">1990</option>
+                <option value="1989">1989</option>
+                                                                                                                <option value="1988">1988</option>
+                                                                                                                <option value="1987">1987</option>
+                                                                                                                <option value="1986">1986</option>
+                                                                                                                <option value="1985">1985</option>
+                                                                                                                <option value="1984">1984</option>
+                                                                                                                <option value="1983">1983</option>
+                                                                                                                <option value="1982">1982</option>
+                                                                                                                <option value="1981">1981</option>
+                                                                                                                <option value="1980">1980</option>
+          </select>
+          <label for="month"></label>
+          <select name="month" id="month">
+           <option value disabled selected hidden>月</option>
+                      <option value="1">1</option>
+                <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>                   
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                <option value="12">12</option>
+          </select>
+          <label for="day"></label>
+          <select name="day" id="day">
+          <option value disabled selected hidden>日</option>
+         <option value="1">1</option>
+         <option value="2">2</option>
+         <option value="3">3</option>
+         <option value="4">4</option>
+         <option value="5">5</option>
+         <option value="6">6</option>
+         <option value="7">7</option>
+         <option value="8">8</option>
+         <option value="9">9</option>
+         <option value="10">10</option>
+         <option value="11">11</option>
+         <option value="12">12</option>
+         <option value="13">13</option>
+         <option value="14">14</option>
+         <option value="15">15</option>
+         <option value="16">16</option>
+         <option value="17">17</option>
+         <option value="18">18</option>
+         <option value="19">19</option>
+         <option value="20">20</option>
+         <option value="21">21</option>
+         <option value="22">22</option>
+         <option value="23">23</option>
+         <option value="24">24</option>
+         <option value="25">25</option>
+         <option value="26">26</option>
+         <option value="27">27</option>
+         <option value="28">28</option>
+         <option value="29">29</option>
+         <option value="30">30</option>
+         <option value="31">31</option>
+          </select>
+        </td>
+      </tr>
+</p>
+      
+      <tr>
+        <script>
+ 
+         $(function() {
+ 
+            $( "#dialog-2" ).dialog({
+ 
+               autoOpen: false,
+ 
+               buttons: {
+ 
+                  OK: function() {$(this).dialog("close");}
+ 
+               },
+ 
+               title: "條款及細則",
+ 
+               position: {
+ 
+                  my: "center",
+ 
+                  at: "center"
+ 
+               }
+ 
+            });
+ 
+            $( "#opener-2" ).click(function() {
+ 
+               $( "#dialog-2" ).dialog( "open" );
+ 
+            });
+ 
+         });
+ 
+      </script>
+      <div id="dialog-2"  title="Dialog Title goes here...">給錢好辦事</div>
+        <td height="35" colspan="2" class="regustertext"><input type="checkbox" name="yes" id="yes" />
+        
+          <label for="yes"></label>
+我已閱讀及同意此平台之<button id="opener-2" type="button">條款及細則</button>和<a onclick="App_Index_RegisterForm_ShowPrivacyPolicyDialog();">私隱權政策</a> </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="regustertext"
+			<p>
+          <span class="regustertextform">
+          <input name="YES2" type="submit" id="YES2" value="註冊" style="width:80px;height:30px;font-size:20px;font-family;text-align: center; :Microsoft JhengHei; border:2px #9999FF dashed;"  />
+          </span>
+        </form></td>
+</p>
+        </tr>
+    </table></td>
+  </tr>
+</table>
+　
+</body>
+</html>
+

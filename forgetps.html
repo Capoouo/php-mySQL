@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>無標題文件</title>
+<style type="text/css">
+.coverflow{
+        width: 1190px;
+        height: 624px;
+        position: relative;
+    }
+    .coverflow>a{
+        display: block;
+        position: absolute;
+        top:0;
+        left:0;
+        opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-animation: silder 12s linear infinite;
+                    animation: silder 12s linear infinite;
+    }
+    .coverflow>a>img{
+        max-width: 100%;
+    }
+
+/動畫關鍵影格/
+    @-webkit-keyframes silder {
+        8% {
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+        27% {
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+        38% {
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+    }
+    @keyframes silder {
+        8% {
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+        27% {
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+        38% {
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+    }
+
+
+/每個圖片各延遲5秒/
+    .coverflow>a:nth-child(3) {
+        -webkit-animation-delay: 12s;
+                animation-delay: 12s;
+
+    }
+	.coverflow>a:nth-child(2) {
+        -webkit-animation-delay: 8s;
+                animation-delay: 8s;
+
+    }
+	.coverflow>a:nth-child(1) {
+        -webkit-animation-delay: 4s;
+                animation-delay: 4s;
+
+    }
+	/滑入時停止播放/
+.coverflow:hover>a{
+-webkit-animation-play-state: paused;
+animation-play-state: paused;
+}
+.coverflow:hover>a{
+-webkit-animation-iteration-count: 100;
+animation-iteration-count: 100;
+}
+.1 {
+}
+.font12 {
+	color: #FFF;
+}
+.table {
+	background-color: #9999cc;
+	text-align: center;
+}
+.font3 {
+	font-size: 36px;
+	text-align: center;
+}
+.title1 {
+	height: auto;
+	width: auto;
+}
+body {
+	background-color: #151b27;
+}
+.table tr td .font12 {
+	font-size: 36px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+.fonr4 {
+	font-size: 24px;
+	color: #000;
+}
+.table tr .1263 table {
+	text-align: center;
+}
+.text form {
+	text-align: left;
+}
+.regustertext {
+	text-align: center;
+}
+.regustertextform {
+	text-align: left;
+}
+.login {
+	text-align: left;
+}
+.re {
+	text-align: right;
+}
+
+</style></head>
+
+<body>
+<table width="1190" border="0" align="center">
+  <tr class="table">
+    <td height="30" class="font3"><a href="index.html"><img src="images/Background.png" width="1190" height="30" /></a></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table width="700" height="550" border="0" align="center" cellpadding="0" cellspacing="0" class="table">
+  <tr>
+    <td width="205" colspan="5" class="1263"><table width="700" border="0">
+      <tr>
+        <td width="700" height="350"><img src="images/sharrrrk.png" width="455" height="307" /></td>
+        </tr>
+      <tr>
+        <td height="30" class="font3">尋找你的帳戶</td>
+        </tr>
+      <tr>
+        <td height="30"><form id="form1" name="form1" method="POST" action="sendmail.php">
+          <label for="email"></label>
+          <input name="email" type="email" id="email" placeholder="電子郵件" maxlength="50" size="50" />
+       </td>
+        </tr>
+      <tr>
+        <td height="50">
+          <input type="submit" name="login" id="login" value="繼續" style="width:80px;height:30px;"  />
+          </form></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>
+
